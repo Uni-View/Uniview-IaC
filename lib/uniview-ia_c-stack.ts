@@ -60,7 +60,7 @@ export class UniviewIaCStack extends cdk.Stack {
       ),
       machineImage: new ec2.GenericLinuxImage({
         // NOTE: AMI from uniview-backend-1
-        "ap-northeast-2": "ami-045fe7351ba18fc80",
+        "ap-northeast-2": "ami-0b588dcf47fa944ea",
       }),
       blockDevices: [rootVolume],
     });
@@ -86,7 +86,7 @@ export class UniviewIaCStack extends cdk.Stack {
           version: rds.PostgresEngineVersion.VER_12,
         }),
         snapshotIdentifier:
-          "arn:aws:rds:ap-northeast-2:351990402606:snapshot:uniview-db-20221001",
+          "arn:aws:rds:ap-northeast-2:598559636920:snapshot:uniview-db-snapshop-2023-10-28",
         vpc,
         vpcSubnets: {
           subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
